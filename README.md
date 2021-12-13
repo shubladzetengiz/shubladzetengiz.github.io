@@ -1,0 +1,1 @@
+# shubladzetengiz.github.io
