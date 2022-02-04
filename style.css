@@ -130,17 +130,6 @@ ul{
     list-style: none;
 }
 
-.icon-html5, .icon-css3{
-    font-size: 20px;
-}
-
-.icon-html5{
-    color: red;
-}
-
-.icon-css3{
-    color: blue;
-}   
 
 .extable{
     display: flex;
@@ -172,8 +161,7 @@ table tr:nth-child(even){
 
 .adico::first-letter,
 .icon-graduation-cap::first-letter,
-.icon-language::first-letter,
-.icon-globe::first-letter{
+.icon-language::first-letter{
         padding-right: 5px;
     }
 
@@ -202,4 +190,33 @@ input[type=button]:hover{
     background-color: blue;
     color:white;
 }
+
+/*
+skills
+*/
+
+#skill {
+    text-align:center;
+}
+
+.sk-icon{
+    justify-content: center;
+    text-align: center;
+}
+.inline-flex img {
+    width: 50px;
+    display: inline-flex;
+}
+
+summary{
+    text-transform: uppercase;
+    /* text-decoration-line: underline; */
+    /* text-decoration-style: double; */
+    margin-bottom: 15px;
+    padding-bottom: 2%;
+    font-weight: bold;
+}
+
+
+
 
