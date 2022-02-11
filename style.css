@@ -29,15 +29,16 @@ body{
     font-style: italic;
 }
 .sidebar{
-    width: 15%;
+    min-width: 10%;
     margin-right: 20px;
     border:1px black solid;
     border-radius:20px;
     background-color: silver;
 }
 
-.sidebar img {
-    border-radius: 50%;    
+#avatar{
+    border-radius: 50%;
+    min-width: 10%;
 }
 
 .info-center{
