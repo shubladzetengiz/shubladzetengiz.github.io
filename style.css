@@ -74,6 +74,10 @@ ul{
     list-style: none;
 }
 
+#EN::before{
+    content: '🇺🇸';
+    padding-right: 10px;
+}
 #FR::before{
     content: '🇫🇷';
     padding-right: 10px;
