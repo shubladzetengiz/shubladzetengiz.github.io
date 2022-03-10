@@ -164,11 +164,6 @@ table tr:nth-child(even){
     background-color: silver;
 }
 
-.adico::first-letter,
-.icon-graduation-cap::first-letter,
-.icon-language::first-letter{
-        padding-right: 5px;
-    }
 
   
 
