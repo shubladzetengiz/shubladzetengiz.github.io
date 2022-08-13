@@ -519,3 +519,25 @@ table {
     }
 
  }
+
+ @media (max-width:768px){
+    .port div {
+        display: flex;
+        padding-top: 1.5rem;
+    
+    }
+    
+    .port .source{
+        justify-content: center;
+    }
+    
+    .port .source div {
+        display: inline;
+        padding-top: 1.5rem;
+        margin: 2.5rem;
+    }
+    
+    .port img {
+        width:20rem;
+    }
+ }
