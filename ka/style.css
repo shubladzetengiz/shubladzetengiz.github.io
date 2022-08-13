@@ -493,6 +493,10 @@ table {
         width:10rem;
     }
 
+    .portfolio .box-container table{
+        width:75%;
+    }
+
  }
 
 @media (max-width:400px){
@@ -516,12 +520,7 @@ table {
     .portfolio .box-container .box{
         width:100%;
     }
-
-    .portfolio .box-container table{
-        width:75%;
-    }
     
-
     .contact .row form{
         margin:3rem 0;
     }
