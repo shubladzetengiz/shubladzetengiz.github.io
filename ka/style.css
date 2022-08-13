@@ -492,7 +492,7 @@ table {
     .port img {
         width:10rem;
     }
-    table {
+    .box-container {
         width: 10%;
     }
  }
