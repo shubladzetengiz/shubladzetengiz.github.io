@@ -462,10 +462,18 @@ table {
         padding:1rem 4rem;
     }
 
+    .portfolio .box-container table{
+        width:50%;
+    }
+
 }
 
 @media (max-width:991px){
     
+    .portfolio .box-container table{
+        width:20%;
+    }
+
    header{
        left:-120%;
    }
@@ -521,6 +529,10 @@ table {
         width:100%;
     }
     
+    .portfolio .box-container table{
+        width:10%;
+    }
+
     .contact .row form{
         margin:3rem 0;
     }
