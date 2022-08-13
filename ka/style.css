@@ -305,9 +305,6 @@ header .navbar ul li a:hover{
     width:100%;
     object-fit: cover;
 }
-/* .portfolio .box-container table{
-    width: 80%;
-} */
 
 .portfolio .box-container .box:hover img{
     transform: scale(1.2);
