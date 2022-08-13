@@ -305,9 +305,9 @@ header .navbar ul li a:hover{
     width:100%;
     object-fit: cover;
 }
-.portfolio .box-container table{
+/* .portfolio .box-container table{
     width: 80%;
-}
+} */
 
 .portfolio .box-container .box:hover img{
     transform: scale(1.2);
@@ -414,7 +414,7 @@ table {
     border-style: solid;
     color: white;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   
   table td, table th {
