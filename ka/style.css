@@ -409,8 +409,8 @@ header .navbar ul li a:hover{
 /*table*/
 
 table {
-    width: 80%;
-    height: 80vh;
+    width: 75%;
+    height: 75vh;
     background-color: #111;
     border-collapse: collapse;
     border-width: 1px;
@@ -461,19 +461,9 @@ table {
     .home{
         padding:1rem 4rem;
     }
-
-    table{
-        width:50%;
-    }
-
 }
 
 @media (max-width:991px){
-    
-    table{
-        width:20%;
-    }
-
    header{
        left:-120%;
    }
@@ -501,10 +491,6 @@ table {
         width:10rem;
     }
 
-    table{
-        width:75%;
-    }
-
  }
 
 @media (max-width:400px){
@@ -527,10 +513,6 @@ table {
 
     .portfolio .box-container .box{
         width:100%;
-    }
-    
-    table{
-        width:10%;
     }
 
     .contact .row form{
