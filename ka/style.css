@@ -305,17 +305,13 @@ header .navbar ul li a:hover{
     width:100%;
     object-fit: cover;
 }
+.portfolio .box-container table{
+    width: 80%;
+}
 
 .portfolio .box-container .box:hover img{
     transform: scale(1.2);
 }
-/* .prot div a img{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding:2rem 0;
-} */
 
 .port div {
     display: flex;
@@ -409,8 +405,8 @@ header .navbar ul li a:hover{
 /*table*/
 
 table {
-    width: 75%;
-    height: 75vh;
+    width: 80%;
+    height: 80vh;
     background-color: #111;
     border-collapse: collapse;
     border-width: 1px;
