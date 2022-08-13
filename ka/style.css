@@ -514,9 +514,12 @@ table {
     }
 
     .portfolio .box-container .box{
-        width:10%;
+        width:100%;
     }
 
+    .portfolio .box-container table{
+        width:80%;
+    }
     
 
     .contact .row form{
