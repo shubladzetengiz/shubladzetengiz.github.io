@@ -492,9 +492,7 @@ table {
     .port img {
         width:10rem;
     }
-    .box-container {
-        width: 10%;
-    }
+
  }
 
 @media (max-width:400px){
@@ -516,7 +514,7 @@ table {
     }
 
     .portfolio .box-container .box{
-        width:100%;
+        width:10%;
     }
 
     
