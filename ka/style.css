@@ -418,7 +418,7 @@ table {
     border-style: solid;
     color: white;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   
   table td, table th {
@@ -489,7 +489,9 @@ table {
     html{
         font-size: 50%;
     }
- 
+    .port img {
+        width:10rem;
+    }
  }
 
 @media (max-width:400px){
@@ -513,6 +515,8 @@ table {
     .portfolio .box-container .box{
         width:100%;
     }
+
+    
 
     .contact .row form{
         margin:3rem 0;

@@ -317,26 +317,6 @@ header .navbar ul li a:hover{
     padding:2rem 0;
 } */
 
-.port div {
-    display: flex;
-    padding-top: 1.5rem;
-
-}
-
-.port .source{
-    justify-content: center;
-}
-
-.port .source div {
-    display: inline;
-    padding-top: 1.5rem;
-    margin: 2.5rem;
-}
-
-.port img {
-    width:20rem;
-}
-
 
 .contact .row{
     display: flex;
