@@ -462,7 +462,7 @@ table {
         padding:1rem 4rem;
     }
 
-    .portfolio .box-container table{
+    table{
         width:50%;
     }
 
@@ -470,7 +470,7 @@ table {
 
 @media (max-width:991px){
     
-    .portfolio .box-container table{
+    table{
         width:20%;
     }
 
@@ -501,7 +501,7 @@ table {
         width:10rem;
     }
 
-    .portfolio .box-container table{
+    table{
         width:75%;
     }
 
@@ -529,7 +529,7 @@ table {
         width:100%;
     }
     
-    .portfolio .box-container table{
+    table{
         width:10%;
     }
 
