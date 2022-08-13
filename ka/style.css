@@ -409,7 +409,7 @@ header .navbar ul li a:hover{
 /*table*/
 
 table {
-    width: 50%;
+    width: 80%;
     height: 80vh;
     background-color: #111;
     border-collapse: collapse;
@@ -492,6 +492,19 @@ table {
     .port img {
         width:10rem;
     }
+
+    table {
+        width: 10%;
+        height: 80vh;
+        background-color: #111;
+        border-collapse: collapse;
+        border-width: 1px;
+        border-color: #f9ca24;
+        border-style: solid;
+        color: white;
+        text-align: center;
+        font-size: 1.4rem;
+      }
  }
 
 @media (max-width:400px){
