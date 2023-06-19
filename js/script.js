@@ -56,7 +56,7 @@ function calculateAge(birthDate) {
         }
 
         window.onload = function() {
-            var birthDate = '1994-06-01'; // Дата рождения ГГ-ММ-ДД)
+            var birthDate = '1998-06-01'; // Дата рождения ГГ-ММ-ДД)
             var age = calculateAge(birthDate);
 
             // Обновляем элемент с id "age" текущим возрастом
