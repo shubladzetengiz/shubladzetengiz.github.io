@@ -1,350 +1,473 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHUBLADZE Tengiz</title>
-
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
-
+    <title>Tengiz Shubladze | Network & Fiber Optic Technician</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    
-<!-- header section starts  -->
+    <div class="bg-animation"></div>
+    <div class="grid-overlay"></div>
 
-<header>
-
-    <div class="user">
-        <img src="img/my.jpeg" alt="">
-        <h3 class="name">shubladze tengiz</h3>
-        <p class="post">Technicien supérieur systèmes et réseaux</p>
-    </div>
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">home</a></li>
-            <li><a href="#about">sur moi</a></li>
-            <li><a href="#education">éducation</a></li>
-            <li><a href="#portfolio">Expériences</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">TS.</div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#formation">Formation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
-</header>
+    <!-- QR Button -->
+    <button class="qr-btn" id="qrBtn" title="Partager mon portfolio" aria-label="Afficher QR code">
+        <i class="fas fa-qrcode"></i>
+    </button>
 
-<!-- header section ends -->
-
-<div id="menu" class="fas fa-bars"></div>
-
-<!-- home section starts  -->
-
-<section class="home" id="home">
-
-    <h3>BONJOUR !</h3>
-    <h1>Je suis <span>shubladze tengiz</span></h1>
-    <p>Passionné par l'informatique dès le plus jeune âge. La capacité de maîtriser la technologie. J'adore le travail d'équipe
-    </p>
-    <a href="#about"><button class="btn">sur moi <i class="fas fa-user"></i></button></a>
-
-</section>
-
-<!-- home section ends -->
-
-<!-- about section starts  -->
-
-<section class="about" id="about">
-
-<h1 class="heading"> <span>sur</span> moi </h1>
-
-<div class="row">
-
-    <div class="info">
-        <h3> <span> nom / prénom  : </span> shubladze tengiz </h3>
-        <h3> <span> âge :<span style="color: #f9ca24" id="age"></span> </span></h3>
-        <h3> <span> niveau professionnel : </span> BAC +2 (niveau 5, anciennement III) </h3>
-        <h3> <span> language : </span>Anglais, Russe, Polonais, Allemand, Géorgien</h3>
-        <a href="cv/SHUBLADZE-Tengiz.pdf" target="_blank"><button class="btn"> Télécharger CV <i class="fas fa-download"></i> </button></a>
+    <!-- QR Modal -->
+    <div class="qr-modal" id="qrModal" role="dialog" aria-modal="true" aria-labelledby="qrTitle">
+        <div class="qr-content">
+            <span class="qr-close" id="qrClose" aria-label="Fermer">&times;</span>
+            <h3 id="qrTitle" class="qr-title">Scanner pour visiter</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Partagez mon portfolio avec un simple scan</p>
+            <div class="qr-code" id="qrCode">
+                <img src="" alt="QR Code du portfolio" id="qrImg" loading="lazy">
+            </div>
+            <p class="qr-text mono" id="qrUrl"></p>
+        </div>
     </div>
 
-    <div class="counter">
-       
-        <!-- <div class="box">
-            <span>HTML</span>
-            <progress></progress>
-        </div> -->
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="hero-container">
+            <div class="hero-avatar">
+                <div class="avatar-wrapper">
+                    <img src="img/my.jpg" alt="Tengiz Shubladze"
+                        onerror="this.src='https://via.placeholder.com/300x300/00d4ff/0a0e27?text=TS'">
+                    <div class="avatar-badge">✓</div>
+                </div>
+            </div>
 
-      
-<!-- 
-        <div class="box">
-            <span>100+</span>
-            <h3>porject completed</h3>
+            <div class="hero-content">
+                <h1>Tengiz <span class="highlight">Shubladze</span></h1>
+                <p class="title">Technicien Supérieur Systèmes & Réseaux | Fibre Optique</p>
+
+                <div class="hero-meta">
+                    <div class="item">
+                        <i class="fas fa-birthday-cake"></i>
+                        <span><span id="ageCounter">26</span> ans</span>
+                    </div>
+                    <div class="item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Perpignan, France (66100)</span>
+                    </div>
+                </div>
+
+                <div class="hero-description">
+                    <p><strong>Passionné d'informatique depuis l'enfance | En route vers DevOps & Cybersécurité</strong>
+                    </p>
+                    <p>Curieux de nature et autodidacte, je poursuis avec détermination une carrière d'excellence en
+                        DevOps et cybersécurité : automatisation, cloud sécurisé, DevSecOps.</p>
+                    <p>Auteur d'un blog technique, je partage des guides clairs et motivants pour aider les débutants en
+                        IT.</p>
+                    <p>Toujours prêt à apprendre des experts et à transmettre mon savoir aux novices.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Fibre Optique</span>
+                        <span class="tech-tag">Réseaux</span>
+                        <span class="tech-tag">Linux/Windows</span>
+                        <span class="tech-tag">Virtualisation</span>
+                        <span class="tech-tag">pfSense</span>
+                        <span class="tech-tag">DevOps</span>
+                        <span class="tech-tag">Cybersécurité</span>
+                    </div>
+                </div>
+
+                <div class="hero-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>07 69 70 70 17</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>shubladzetengiz2@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="hero-social">
+                    <a href="#contact" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shubladze-tengiz
+
+" class="social-link" title="LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <!-- <a href="https://github.com/shubladzetengiz" class="social-link" title="GitHub" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a> -->
+                    <a href="tel:+33769707017" class="social-link" title="Téléphone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="competences">
+        <div class="section-header fade-in">
+            <h2>Compétences Professionnelle</h2>
         </div>
 
-        <div class="box">
-            <span>430+</span>
-            <h3>happy clients</h3>
+        <div class="skills-grid">
+            <div class="skill-card fade-in">
+                <h3><i class="fas fa-network-wired"></i> Réseaux & Télécom</h3>
+                <ul class="skill-list">
+                    <li>Installation fibre optique (D2, D3, Covage)</li>
+                    <li>Administration réseaux et sous-réseaux</li>
+                    <li>Configuration routeur pfSense</li>
+                    <li>Paramétrage OpenVPN</li>
+                    <li>Virtualisation réseaux (GNS3)</li>
+                    <li>Monitoring avec LibreNMS</li>
+                    <li>Connexion boîtes de raccordement</li>
+                </ul>
+            </div>
+
+            <div class="skill-card fade-in">
+                <h3><i class="fas fa-server"></i> Systèmes & Virtualisation</h3>
+                <ul class="skill-list">
+                    <li>Administration Windows / Linux / Unix</li>
+                    <li>Virtualisation (Proxmox, VirtualBox)</li>
+                    <li>Administration Nextcloud</li>
+                    <li>CMS WordPress</li>
+                    <li>Partage de fichiers multi-OS</li>
+                    <li>Gestion des disques et sauvegardes</li>
+                    <li>Installation systèmes d'exploitation</li>
+                </ul>
+            </div>
+
+            <div class="skill-card fade-in">
+                <h3><i class="fas fa-tools"></i> Support & Maintenance</h3>
+                <ul class="skill-list">
+                    <li>Intervention à distance (SSH, AnyDesk, TeamViewer)</li>
+                    <li>Diagnostic de pannes</li>
+                    <li>Remplacement composants défectueux</li>
+                    <li>Maintenance préventive et curative</li>
+                    <li>Relier postes et périphériques</li>
+                    <li>Nettoyage et désinfection</li>
+                </ul>
+            </div>
+
+            <div class="skill-card fade-in">
+                <h3><i class="fas fa-bolt"></i> Intervention Terrain</h3>
+                <ul class="skill-list">
+                    <li>Installation équipements sur site</li>
+                    <li>Connexion aux réseaux extérieurs</li>
+                    <li>Préparation matériel</li>
+                    <li>Interventions habilitées</li>
+                    <li>Assemblage matériaux et produits</li>
+                    <li>Contrôle qualité livraisons</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="section-header fade-in">
+            <h2>Expérience Professionnelle</h2>
         </div>
 
-        <div class="box">
-            <span>12+</span>
-            <h3>awards won</h3>
-        </div> -->
+        <!-- Catégorie 1: Télécoms & Informatique -->
+        <div class="experience-category fade-in">
+            <h3 class="category-title">Parcours professionnel dans les télécoms et l'informatique</h3>
 
-    </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">09/2024 - 08/2025</div>
+                        <div class="timeline-title">Installateur Réseau Télécom Fibre Optique</div>
+                        <div class="timeline-company">A.U.G Fibre - Perpignan</div>
+                        <div class="timeline-desc">Interventions régulières en D3, fréquentes en D2 et sur réseaux
+                            Covage. Déploiement et maintenance d'infrastructures fibre optique.</div>
+                    </div>
+                </div>
 
-</div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">04/2024 - 05/2024</div>
+                        <div class="timeline-title">Installateur Réseau Télécom Fibre Optique</div>
+                        <div class="timeline-company">AUG Fibre - Perpignan</div>
+                        <div class="timeline-desc">Interventions techniques sur réseau D3.</div>
+                    </div>
+                </div>
 
-</section>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">06/2021 - 02/2022</div>
+                        <div class="timeline-title">Technicien Informatique</div>
+                        <div class="timeline-company">Association de Recyclage Catalan - Perpignan</div>
+                        <div class="timeline-desc">Contrat service civique. Maintenance informatique, réparation et
+                            reconditionnement de matériel.</div>
+                    </div>
+                </div>
 
-<!-- about section ends -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">03/2021</div>
+                        <div class="timeline-title">Technicien Informatique (Stagiaire)</div>
+                        <div class="timeline-company">Association de Recyclage Catalan - Perpignan</div>
+                        <div class="timeline-desc">Maintenance informatique.</div>
+                    </div>
+                </div>
 
-<!-- education section starts  -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">10/2020 - 11/2020</div>
+                        <div class="timeline-title">Technicien (Stagiaire)</div>
+                        <div class="timeline-company">MITI - Cabestany</div>
+                        <div class="timeline-desc">Installation: climatiseurs, interphones, portillons, etc.</div>
+                    </div>
+                </div>
 
-<section class="education" id="education">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">01/2019</div>
+                        <div class="timeline-title">Technicien en Maintenance Informatique (Stagiaire)</div>
+                        <div class="timeline-company">Mairie de Perpignan</div>
+                        <div class="timeline-desc">Maintenance informatique.</div>
+                    </div>
+                </div>
 
-<h1 class="heading"> éducation </h1>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">11/2018 - 12/2018</div>
+                        <div class="timeline-title">Technicien en Maintenance Informatique (Stagiaire)</div>
+                        <div class="timeline-company">Association Route 66 - Perpignan</div>
+                        <div class="timeline-desc">Maintenance informatique.</div>
+                    </div>
+                </div>
 
-<div class="box-container">
-    <div class="box">
-        <i class="fas fa-graduation-cap"></i>
-        <span>D'octobre 2019 à juillet 2020</span>
-        <span>LDNR</span>
-        <span>toulouse</span>
-        <h3>Formation Technicien Supérieur Système et Réseaux </h3>
-        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p> -->
-    </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">06/2018</div>
+                        <div class="timeline-title">Technicien en Maintenance Informatique (Stagiaire)</div>
+                        <div class="timeline-company">Recyclage Catalan - Perpignan</div>
+                        <div class="timeline-desc">Maintenance informatique.</div>
+                    </div>
+                </div>
 
-    <div class="box">
-        <i class="fas fa-graduation-cap"></i>
-        <span>2015 - 2017</span>
-        <span>Lycée Pablo Picasso</span>
-        <span>Perpignan</span>
-        <h3>Systèmes Électroniques et Numériques</h3>
-        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p> -->
-    </div>
- 
-  
-<!--
-    <div class="box">
-        <i class="fas fa-graduation-cap"></i>
-        <span>2018</span>
-        <h3>front end development</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p>
-    </div>
-
-    <div class="box">
-        <i class="fas fa-graduation-cap"></i>
-        <span>2019</span>
-        <h3>front end development</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p>
-    </div>
-
-    <div class="box">
-        <i class="fas fa-graduation-cap"></i>
-        <span>2020</span>
-        <h3>front end development</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p>
-    </div>
-
-    <div class="box">
-        <i class="fas fa-graduation-cap"></i>
-        <span>2021</span>
-        <h3>front end development</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quos alias praesentium. Id autem provident laborum quae, distinctio eaque temporibus!</p>
-    </div>
- -->
-</div>
-
-</section>
-
-<!-- education section ends -->
-
-<!-- portfolio section starts  -->
-
-<section class="portfolio" id="portfolio">
-
-    
-<h1 class="heading"> Mon <span>Expériences</span> </h1>
-
-<div class="box-container">
-    <table>
-        <tbody>
-        <tr>
-        <th>les métiers</th>
-        <th>Nom de Entreprise</th>
-        <th>Lieu</th>
-        <th>Date / Periodes</th>
-        </tr>
-        <tr>
-        <td>Technicien Informatique<br>contrat service civique</td>
-        <td>Association de Recyclage Catalan</td>
-        <td>Perpignan, France</td>
-        <td>De 14/06/2021 à 12/02/2022</td>
-        </tr>
-        <tr>
-        <td>Magasinier</td>
-        <td>B&amp;M Baboo</td>
-        <td>Perpignan, France</td>
-        <td>De Mars 2021 à avril 2021</td>
-        </tr>
-        <tr>
-        <td>Technicien Informatique</td>
-        <td>Association de Recyclage Catalan</td>
-        <td>Perpignan, France</td>
-        <td>Mars 2021</td>
-        </tr>
-        <tr>
-        <td>Technicien<br>Installation: climes, inter-phone, portillon, etc..</td>
-        <td>MITI</td>
-        <td>Cabestany, France</td>
-        <td>D'octobre 2020 à novembre 2020</td>
-        </tr>
-        <tr>
-        <td>Formation Technicien Supérieur Système et Réseaux<br>Formation de 850 h</td>
-        <td>LDNR</td>
-        <td>toulouse, Labège</td>
-        <td>D'octobre 2019 à juillet 2020</td>
-        </tr>
-        <tr>
-        <td>Technicien en maintenance informatique</td>
-        <td>mairie de Perpignan</td>
-        <td>Perpignan, France</td>
-        <td>Janvier 2019</td>
-        </tr>
-        <tr>
-        <td>Technicien en maintenance informatique</td>
-        <td>Association route 66</td>
-        <td>Perpignan, France</td>
-        <td>De novembre 2018 à décembre 2018</td>
-        </tr>
-        <tr>
-        <td>Magasinier</td>
-        <td>CCE Cabestany</td>
-        <td>Perpignan, France</td>
-        <td>Septembre 2018</td>
-        </tr>
-        <tr>
-        <td>Technicien en maintenance informatique</td>
-        <td>Recyclage Catalan</td>
-        <td>Perpignan, France</td>
-        <td>Juin 2018</td>
-        </tr>
-        <tr>
-        <td>Action Declic</td>
-        <td>AFPA</td>
-        <td>Perpignan, France</td>
-        <td>Juin 2018</td>
-        </tr>
-        <tr>
-        <td>Installateur de ﬁbre optique</td>
-        <td>SOTRANASA</td>
-        <td>Perpignan, France</td>
-        <td>De juin 2017 à juillet 2017</td>
-        </tr>
-        <tr>
-        <td>Magasinier</td>
-        <td>CCE Cabestany</td>
-        <td>Perpignan, France</td>
-        <td>De février 2017 à Mars 2017</td>
-        </tr>
-        </tbody>
-    </table>
-    <!-- <div class="box">
-        <img src="images/img1.jpg" alt="">
-    </div>
-
-    <div class="box">
-        <img src="images/img2.jpg" alt="">
-    </div>
-
-    <div class="box">
-        <img src="images/img3.jpg" alt="">
-    </div>
-
-    <div class="box">
-        <img src="images/img4.jpg" alt="">
-    </div>
-
-    <div class="box">
-        <img src="images/img5.jpg" alt="">
-    </div>
-
-    <div class="box">
-        <img src="images/img6.jpg" alt="">
-    </div> -->
-
-</div>
-
-</section> 
-
-<!-- portfolio section ends -->
-
-<!-- contact section starts  -->
-
-<section class="contact" id="contact">
-
-<h1 class="heading"> <span>contact</span> me </h1>
-
-<div class="row">
-
-    <div class="content">
-
-        <h3 class="title">contact info</h3>
-
-        <div class="info">
-            <h3> <i class="fas fa-envelope"></i> shubladzetengiz2@gmail.com </h3>
-            <h3> <i class="fas fa-phone"></i>07 69 70 70 17 </h3>
-            <h3> <i class="fas fa-map-marker-alt"></i> Perpignan, France - 66000. </h3>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">06/2017 - 07/2017</div>
+                        <div class="timeline-title">Installateur de Fibre Optique (Stagiaire)</div>
+                        <div class="timeline-company">SOTRANASA - Perpignan</div>
+                        <div class="timeline-desc">Première expérience dans le déploiement de la fibre optique.</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-    </div>
+        <!-- Catégorie 2: Autre parcours -->
+        <div class="experience-category fade-in">
+            <h3 class="category-title">Autre parcours professionnel</h3>
 
-    <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdVEACejUSoNXdL_gJjeOfeDtOi2WKthgTdof3w0aiNaCbeFw/formResponse" target="_self" method="POST">
-        <input type="text" placeholder="name" name="entry.912770092" class="box">
-        <input type="email" placeholder="email" name="entry.1499118227" class="box">
-        <input type="text" placeholder="objectif de contact ..." name="entry.851081299" class="box">
-        <textarea name="entry.1364562811" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
-        <button type="submit" class="btn"> envoyer <i class="fas fa-paper-plane"></i> </button>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">03/2021 - 04/2021</div>
+                        <div class="timeline-title">Magasinier</div>
+                        <div class="timeline-company">B&M Baboo - Perpignan</div>
+                        <div class="timeline-desc">Gestion de stock et logistique.</div>
+                    </div>
+                </div>
 
-    </form>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">09/2018</div>
+                        <div class="timeline-title">Magasinier</div>
+                        <div class="timeline-company">CCE Cabestany - Perpignan</div>
+                        <div class="timeline-desc">Gestion de stock.</div>
+                    </div>
+                </div>
 
-</div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">02/2017 - 03/2017</div>
+                        <div class="timeline-title">Magasinier</div>
+                        <div class="timeline-company">CCE Cabestany - Perpignan</div>
+                        <div class="timeline-desc">Gestion de stock et logistique.</div>
+                    </div>
+                </div>
 
-</section>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">06/2018</div>
+                        <div class="timeline-title">Action Declic</div>
+                        <div class="timeline-company">AFPA - Perpignan</div>
+                        <div class="timeline-desc">Formation et accompagnement professionnel.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- contact section ends -->
+    <!-- Education Section -->
+    <section class="education" id="formation">
+        <div class="section-header fade-in">
+            <h2>Diplômes & Formations</h2>
+            <p>Parcours académique et certifications</p>
+        </div>
 
+        <div class="education-grid">
+            <div class="edu-card obtained fade-in">
+                <div class="edu-level">(BAC+2) Niveau 4</div>
+                <div class="edu-title">Installateur Réseau Télécom en Fibre Optique</div>
+                <div class="edu-school">OFIAQ - Perpignan</div>
+                <div class="edu-date">2025</div>
+            </div>
 
-<!-- scroll top button  -->
+            <div class="edu-card obtained fade-in">
+                <div class="edu-level">(CAP/BEP) Niveau 3</div>
+                <div class="edu-title">Installateur Réseau Télécom en Fibre Optique</div>
+                <div class="edu-school">OFIAQ - Perpignan</div>
+                <div class="edu-date">01/2024 - 05/2024</div>
+            </div>
 
-<a href="#home" class="top">
-    <img src="images/scroll-top-img.png" alt="">
-</a>
+            <div class="edu-card obtained fade-in">
+                <div class="edu-level">(BAC+2) Niveau 5</div>
+                <div class="edu-title">Technicien Supérieur Système et Réseaux</div>
+                <div class="edu-school">LDNR - Toulouse/Labège</div>
+                <div class="edu-date">10/2019 - 07/2020</div>
+            </div>
 
+            <div class="edu-card fade-in">
+                <div class="edu-level">Seconde</div>
+                <div class="edu-title">Systèmes Électroniques et Numériques</div>
+                <div class="edu-school">Lycée Pablo Picasso - Perpignan</div>
+                <div class="edu-date">01/2015 - 01/2017</div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Languages Section -->
+    <section id="langues">
+        <div class="section-header fade-in">
+            <h2>Langues</h2>
+            <p>Maîtrise des langues</p>
+        </div>
 
+        <div class="languages-grid">
+            <div class="lang-card fade-in">
+                <div class="lang-flag">🇷🇺</div>
+                <div class="lang-name">Russe</div>
+                <span class="lang-level c2">C2 - Bilingue</span>
+            </div>
 
+            <div class="lang-card fade-in">
+                <div class="lang-flag">🇬🇪</div>
+                <div class="lang-name">Géorgien</div>
+                <span class="lang-level c2">C2 - Bilingue</span>
+            </div>
 
+            <div class="lang-card fade-in">
+                <div class="lang-flag">🇵🇱</div>
+                <div class="lang-name">Polonais</div>
+                <span class="lang-level b1">B1 - Intermédiaire</span>
+            </div>
 
+            <!-- <div class="lang-card fade-in">
+                <div class="lang-flag">🇩🇪</div>
+                <div class="lang-name">Allemand</div>
+                <span class="lang-level a2">A2 - Élémentaire</span>
+            </div> -->
 
+            <div class="lang-card fade-in">
+                <div class="lang-flag">🇬🇧</div>
+                <div class="lang-name">Anglais</div>
+                <span class="lang-level a1">A1 - Débutant</span>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header fade-in">
+            <h2>Me Contacter</h2>
+            <!-- <p>Une opportunité ? Un projet ? N'hésitez pas à me contacter</p> -->
+        </div>
 
+        <div class="contact-wrapper fade-in">
+            <form class="contact-form" action="https://formsubmit.co/tengo1513@gmail.com" method="POST"
+                onsubmit="this.querySelector('button[type=submit]').disabled=true; this.querySelector('button[type=submit]').innerHTML='<i class=\'fas fa-spinner fa-spin\'></i> Envoi en cours...'">
+                <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio de Tengiz">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://shubladzetengiz.github.io/merci.html">
+                <input type="hidden" name="_autoresponse"
+                    value="Merci pour votre message ! Je vous répondrai dans les plus brefs délais. — Tengiz">
 
+                <div class="form-group">
+                    <label for="name">Nom complet *</label>
+                    <input type="text" id="name" name="name" class="form-control" required placeholder="Votre nom">
+                </div>
 
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" class="form-control" required
+                        placeholder="votre@email.com">
+                </div>
 
+                <div class="form-group">
+                    <label for="subject">Sujet *</label>
+                    <input type="text" id="subject" name="subject" class="form-control" required
+                        placeholder="Objet du message">
+                </div>
 
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" class="form-control" required
+                        placeholder="Votre message..."></textarea>
+                </div>
 
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Envoyer le message
+                </button>
+            </form>
+        </div>
+    </section>
 
-<!-- jquery cdn link  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Footer -->
+    <footer>
+        <div class="logo">TS.</div>
+        <p>&copy; 2025 Tengiz Shubladze. Tous droits réservés.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem;">Technicien Supérieur Systèmes & Réseaux | Fibre Optique</p>
+    </footer>
 
-<!-- custom js file link  -->
 <script src="js/script.js"></script>
-
-
 </body>
+
 </html>
